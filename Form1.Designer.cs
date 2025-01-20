@@ -30,7 +30,7 @@
         {
             btnAdd = new Button();
             label1 = new Label();
-            LstNames = new ListBox();
+            lstNames = new ListBox();
             txtName = new TextBox();
             SuspendLayout();
             // 
@@ -42,6 +42,7 @@
             btnAdd.TabIndex = 0;
             btnAdd.Text = "Add Name";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // label1
             // 
@@ -53,14 +54,14 @@
             label1.Text = "Names";
             label1.Click += label1_Click;
             // 
-            // LstNames
+            // lstNames
             // 
-            LstNames.FormattingEnabled = true;
-            LstNames.ItemHeight = 15;
-            LstNames.Location = new Point(12, 27);
-            LstNames.Name = "LstNames";
-            LstNames.Size = new Size(120, 94);
-            LstNames.TabIndex = 2;
+            lstNames.FormattingEnabled = true;
+            lstNames.ItemHeight = 15;
+            lstNames.Location = new Point(12, 27);
+            lstNames.Name = "lstNames";
+            lstNames.Size = new Size(120, 94);
+            lstNames.TabIndex = 2;
             // 
             // txtName
             // 
@@ -75,7 +76,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(252, 141);
             Controls.Add(txtName);
-            Controls.Add(LstNames);
+            Controls.Add(lstNames);
             Controls.Add(label1);
             Controls.Add(btnAdd);
             Name = "Names";
@@ -88,7 +89,7 @@
 
         private Button btnAdd;
         private Label label1;
-        private ListBox LstNames;
+        private ListBox lstNames;
         private TextBox txtName;
     }
 }
